@@ -23,6 +23,7 @@
     <h2>Donut</h2>
     <svg>
       <circle
+        class="ext"
         cx="50"
         cy="50"
         r="60"
@@ -30,7 +31,7 @@
         stroke-width="5px"
         fill="none"
       />
-      <circle class="ext"
+      <circle
         cx="50"
         cy="50"
         r="30"
@@ -46,11 +47,18 @@
     <h2>Path</h2>
     <svg>
       <path
+        id="theMotionPath"
         d="M 0 50 V 0 L 25 50 L 50 0 V 50"
         fill="none"
         stroke="black"
         stroke-width="2"
       ></path>
+      <circle cx="" cy="" r="10" fill="red">
+        <!-- Définit l'animation -->
+        <animateMotion dur="6s" repeatCount="indefinite">
+          <mpath xlink:href="#theMotionPath" />
+        </animateMotion>
+      </circle>
       <path
         d="M 60 50 L 85 0 L 110 50"
         fill="none"
